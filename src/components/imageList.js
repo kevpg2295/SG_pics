@@ -5,8 +5,9 @@ import ImageCard from "./ImageCard"
 
 
 const ImageList = ({ images }) => {
-  const imgList = images.map(({description, urls, id }) => {
-    return <img alt={description} src={urls.regular} key={id} />;
+  
+  const imgList = images.map((image) => {
+    return <ImageCard key={image.id} image={image} />;
   });
 
   return <div className="image-list"> {imgList}</div>;
